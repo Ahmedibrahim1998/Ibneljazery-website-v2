@@ -1055,6 +1055,30 @@ body {
   }
 }
 
+/* Mobile Hero Section Fix */
+@media (max-width: 576px) {
+  .hero {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .hero .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    max-width: 100% !important;
+  }
+  
+  .hero .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .hero .col-lg-7 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
 /* ============================================= */
 /*     Package Selection State & Enhancements   */
 /* ============================================= */
