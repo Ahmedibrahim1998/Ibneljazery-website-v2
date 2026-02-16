@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>مركز ابن الجزري لتحفيظ القرآن</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+  />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#hero">
+        <img
+          src="assets/LOGO/logo.png"
+          alt="شعار مركز ابن الجزري"
+          class="logo-img me-2"
+        />
+        <span data-i18n="brand_name">مركز ابن الجزري</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#hero" data-i18n="nav_home">الرئيسية</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about" data-i18n="nav_about">عن المركز</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#teachers" data-i18n="nav_teachers">المعلمون</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#programs" data-i18n="nav_programs">الباقات والبرامج</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#courses" data-i18n="nav_courses"> الدورات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#memorization" data-i18n="nav_memorization">الحفظ والمتابعة</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials" data-i18n="nav_testimonials">آراء الطلاب</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq" data-i18n="nav_faq">الأسئلة الشائعة</a>
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-light ms-lg-2 mt-2 mt-lg-0"
+              id="langToggleBtn"
+            >
+              EN
+            </button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-light px-3 py-1 ms-lg-2 mt-2 mt-lg-0" href="#contact">
+              <span data-i18n="nav_signup">سجّل الآن</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero d-flex align-items-center">
+    <div class="overlay"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center">
+        <div class="col-lg-7 text-center text-lg-start text-white">
+          <h1 class="display-5 fw-bold mb-3" data-i18n="hero_title">
+            مركز ابن الجزري لتحفيظ القرآن الكريم
+          </h1>
+          <p class="lead mb-4" data-i18n="hero_lead">
+            حلقاتٌ قرآنية متميزة، إشراف علمي، متابعة مستمرة، ومناهج تربوية
+            تعتني بحفظ كتاب الله فهمًا وتدبرًا.
+          </p>
+          <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
+            <a href="#programs" class="btn btn-main btn-lg px-4" data-i18n="hero_cta_programs">
+              استعرض الباقات
+            </a>
+            <a href="#contact" class="btn btn-outline-light btn-lg px-4" data-i18n="hero_cta_contact">
+              احجز مقعدًا الآن
+            </a>
+          </div>
+          <div class="hero-stats mt-4 row g-3">
+            <div class="col-6 col-md-4">
+              <div class="stat-box">
+                <div class="stat-number">+250</div>
+                <div class="stat-label">حافظ/ة قيد المتابعة</div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="stat-box">
+                <div class="stat-number">+20</div>
+                <div class="stat-label">معلم ومعلمة مجازون</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="stat-box">
+                <div class="stat-number">+8</div>
+                <div class="stat-label">سنوات من العطاء</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block">
+          <div class="hero-card shadow-lg">
+            <h5 class="mb-3 text-center" data-i18n="hero_form_title">سجّل اهتمامك</h5>
+            <p class="small text-muted text-center mb-4" data-i18n="hero_form_subtitle">
+              اكتب بياناتك وسيتواصل معك فريق القبول لترشيح الحلقة الأنسب لك.
+            </p>
+            <form id="heroLeadForm" class="small">
+              <div class="mb-3">
+                <label class="form-label" data-i18n="hero_form_name">الاسم الكامل</label>
+                <input type="text" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" data-i18n="hero_form_phone">رقم الجوال (واتساب)</label>
+                <input type="tel" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" data-i18n="hero_form_age">العمر التقريبي</label>
+                <select class="form-select" required>
+                  <option value="" data-i18n="hero_form_age_placeholder">اختر الفئة العمرية</option>
+                  <option>6 - 9 سنوات</option>
+                  <option>10 - 14 سنة</option>
+                  <option>15 - 18 سنة</option>
+                  <option>أكثر من 18 سنة</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" data-i18n="hero_form_level">مستوى الحفظ الحالي</label>
+                <select class="form-select" required>
+                  <option value="" data-i18n="hero_form_level_placeholder">اختر المستوى</option>
+                  <option data-i18n="hero_form_level_opt1">مبتدئ (لا يوجد حفظ)</option>
+                  <option data-i18n="hero_form_level_opt2">حفظ أقل من 5 أجزاء</option>
+                  <option data-i18n="hero_form_level_opt3">حفظ من 5 إلى 15 جزءًا</option>
+                  <option data-i18n="hero_form_level_opt4">حفظ أكثر من 15 جزءًا</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-main w-100" data-i18n="hero_form_submit">
+                إرسال الطلب
+              </button>
+              <div class="form-message small mt-2 text-center d-none"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-padding bg-light">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <div class="about-content">
+            <h2 class="section-title mb-3" data-i18n="about_title">عن مركز ابن الجزري</h2>
+            <p class="mb-3" data-i18n="about_p1">
+              مركز ابن الجزري هو مركز متخصص في تعليم القرآن الكريم وعلومه،
+              يهدف إلى إعداد جيلٍ قرآني متقنٍ للحفظ والتلاوة، ملتزمٍ بهدي
+              كتاب الله وسنّة نبيه ﷺ، عبر حلقاتٍ حضورية وعن بُعد بإشراف
+              معلمين ومعلمات مجازين بالسند المتصل.
+            </p>
+            <p class="mb-3" data-i18n="about_p2">
+              نعتمد مناهج مدروسة تراعي الفروق الفردية بين الطلاب، مع متابعة رقمية
+              دقيقة لمستوى الحفظ والمراجعة، وتواصل مستمر مع ولي الأمر،
+              ليبقى الطالب مرتبطًا بالقرآن قلبًا وقالبًا.
+            </p>
+            <ul class="list-unstyled about-list mt-3">
+              <li data-i18n="about_list_1">حلقات تحفيظ ومراجعة لجميع الأعمار.</li>
+              <li data-i18n="about_list_2">برامج خاصة للإجازات بالسند في القراءات.</li>
+              <li data-i18n="about_list_3">برامج تأسيس للقراءة (نور البيان/القاعدة النورانية).</li>
+              <li data-i18n="about_list_4">برامج تربوية وإيمانية مرافقة للحفظ.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <div class="about-box shadow-sm p-4 rounded-4 bg-white h-100">
+            <h5 class="mb-3">مميزات المركز</h5>
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="feature-card">
+                  <span class="feature-icon">📖</span>
+                  <h6>إجازات معتمدة</h6>
+                  <p class="small text-muted mb-0">
+                    سلاسل سند متصلة إلى النبي ﷺ.
+                  </p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="feature-card">
+                  <span class="feature-icon">💻</span>
+                  <h6>تعليم عن بُعد</h6>
+                  <p class="small text-muted mb-0">
+                    حلقات أونلاين عبر منصات موثوقة.
+                  </p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="feature-card">
+                  <span class="feature-icon">👨‍👩‍👧‍👦</span>
+                  <h6>متابعة الأسرة</h6>
+                  <p class="small text-muted mb-0">
+                    تقارير دورية لولي الأمر.
+                  </p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="feature-card">
+                  <span class="feature-icon">⭐</span>
+                  <h6>بيئة تربوية</h6>
+                  <p class="small text-muted mb-0">
+                    عناية بالأخلاق والسلوك والقدوة.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teachers Section -->
+  <section id="teachers" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5 teachers-section">
+        <h2 class="section-title mb-3" data-i18n="teachers_title">طاقم المعلمين والمعلمات</h2>
+        <p class="text-muted" data-i18n="teachers_lead">
+          نخبة من أهل القرآن المجازين بالسند المتصل، يجمعون بين الإتقان
+          العلمي والخبرة التربوية وحسن التعامل مع مختلف الأعمار.
+        </p>
+      </div>
+      <div class="row g-4 teachers-section">
+        <div class="col-md-6 col-lg-3">
+          <div class="teacher-card text-center p-3 shadow-sm h-100">
+            <div class="teacher-avatar mx-auto mb-3">
+              <span>أ</span>
+            </div>
+            <h5 class="mb-1" data-i18n="teacher_1_name">الشيخ أحمد الأنصاري</h5>
+            <p class="small text-muted mb-2" data-i18n="teacher_1_cert">إجازة برواية حفص عن عاصم</p>
+            <p class="small mb-2" data-i18n="teacher_1_desc">
+              متخصص في برامج الحفظ المكثف للشباب، خبرة أكثر من 10 سنوات.
+            </p>
+            <span class="badge bg-main-subtle text-main small" data-i18n="teacher_1_badge">
+              حلقات حضورية
+            </span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="teacher-card text-center p-3 shadow-sm h-100">
+            <div class="teacher-avatar mx-auto mb-3">
+              <span>م</span>
+            </div>
+            <h5 class="mb-1" data-i18n="teacher_2_name">الشيخة مريم الزهراء</h5>
+            <p class="small text-muted mb-2" data-i18n="teacher_2_cert">إجازة في عدة قراءات</p>
+            <p class="small mb-2" data-i18n="teacher_2_desc">
+              متخصصة في تحفيظ الفتيات والنساء وإعداد الحافظات للإجازة.
+            </p>
+            <span class="badge bg-main-subtle text-main small" data-i18n="teacher_2_badge">
+              حلقات أونلاين
+            </span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="teacher-card text-center p-3 shadow-sm h-100">
+            <div class="teacher-avatar mx-auto mb-3">
+              <span>خ</span>
+            </div>
+            <h5 class="mb-1" data-i18n="teacher_3_name">الشيخ خالد العُمري</h5>
+            <p class="small text-muted mb-2" data-i18n="teacher_3_cert">إجازة بالسند المتصل</p>
+            <p class="small mb-2" data-i18n="teacher_3_desc">
+              مسؤول برامج المراجعة وضبط الحفظ للطلاب المتقدمين.
+            </p>
+            <span class="badge bg-main-subtle text-main small" data-i18n="teacher_3_badge">
+              برامج متقدمة
+            </span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="teacher-card text-center p-3 shadow-sm h-100">
+            <div class="teacher-avatar mx-auto mb-3">
+              <span>س</span>
+            </div>
+            <h5 class="mb-1" data-i18n="teacher_4_name">الأستاذة سارة الرفاعي</h5>
+            <p class="small text-muted mb-2" data-i18n="teacher_4_cert">تربوية ومتخصصة في التأسيس</p>
+            <p class="small mb-2" data-i18n="teacher_4_desc">
+              متخصصة في برامج الأطفال وتعليم نور البيان والقاعدة النورانية.
+            </p>
+            <span class="badge bg-main-subtle text-main small" data-i18n="teacher_4_badge">
+              تأسيس الأطفال
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs / Packages Section -->
+  <section id="programs" class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title mb-3" data-i18n="programs_title">الباقات والبرامج</h2>
+        <p class="text-muted" data-i18n="programs_lead">
+          اختر الباقة الأنسب لمستوى الحفظ ووقت الفراغ لديك، فجميع
+          برامجنا تشمل متابعة دقيقة وتقارير دورية تعكس تقدّمك.
+        </p>
+      </div>
+      <div class="row g-4">
+        <!-- Beginner -->
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing-card text-center p-4 shadow-sm h-100">
+            <h5 class="mb-2">باقة المبتدئين</h5>
+            <p class="text-muted small mb-3">تأسيس القراءة وحفظ قصار السور</p>
+            <div class="price mb-3">
+              <span class="price-amount">150</span>
+              <span class="price-currency">ر.س / شهر</span>
+            </div>
+            <ul class="list-unstyled text-start small mb-4">
+              <li>٣ حصص أسبوعيًا (حضور/أونلاين).</li>
+              <li>برنامج تأسيسي في مخارج الحروف.</li>
+              <li>حفظ جزء عمّ مع مراجعة مستمرة.</li>
+              <li>تقارير شهرية لولي الأمر.</li>
+            </ul>
+            <button class="btn btn-outline-main w-100 choose-package-btn" data-package="باقة المبتدئين">
+              اختر هذه الباقة
+            </button>
+          </div>
+        </div>
+        <!-- Regular -->
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing-card text-center p-4 shadow-lg h-100 featured">
+            <span class="badge bg-main mb-2">الأكثر اختيارًا</span>
+            <h5 class="mb-2">باقة الحفظ المنتظم</h5>
+            <p class="text-muted small mb-3">لمن يرغب في حفظ مستمر ومتدرج</p>
+            <div class="price mb-3">
+              <span class="price-amount">250</span>
+              <span class="price-currency">ر.س / شهر</span>
+            </div>
+            <ul class="list-unstyled text-start small mb-4">
+              <li>٤ حصص أسبوعيًا.</li>
+              <li>خطة حفظ مخصصة بحسب مستواك.</li>
+              <li>تركيز على ضبط التلاوة وأحكام التجويد.</li>
+              <li>لقاءات تربوية وإيمانية دورية.</li>
+            </ul>
+            <button class="btn btn-main w-100 choose-package-btn" data-package="باقة الحفظ المنتظم">
+              اختر هذه الباقة
+            </button>
+          </div>
+        </div>
+        <!-- Intensive -->
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing-card text-center p-4 shadow-sm h-100">
+            <h5 class="mb-2">باقة الحفظ المكثف</h5>
+            <p class="text-muted small mb-3">لمن لديهم هدف ختم القرآن أو الإجازة</p>
+            <div class="price mb-3">
+              <span class="price-amount">400</span>
+              <span class="price-currency">ر.س / شهر</span>
+            </div>
+            <ul class="list-unstyled text-start small mb-4">
+              <li>٦ حصص أسبوعيًا.</li>
+              <li>برنامج حفظ ومراجعة مكثف.</li>
+              <li>إعداد للإجازة بالسند لمن تأهّل.</li>
+              <li>مقابلات تقييمية دورية مع المشرف العلمي.</li>
+            </ul>
+            <button class="btn btn-outline-main w-100 choose-package-btn" data-package="باقة الحفظ المكثف">
+              اختر هذه الباقة
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title mb-3" data-i18n="courses_title">الدورات القرآنية</h2>
+        <p class="text-muted" data-i18n="courses_lead">
+          دورات متخصصة حضورية (أوفلاين) وعن بُعد (أونلاين) تناسب الطلاب والطالبات في مختلف المستويات.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="pricing-card p-4 h-100 shadow-sm">
+            <span class="badge bg-main-subtle text-main mb-2" data-i18n="courses_offline_badge">حضوري - في مقر المركز</span>
+            <h5 class="mb-2" data-i18n="courses_offline_title">دورات حضورية (أوفلاين)</h5>
+            <p class="text-muted small mb-3" data-i18n="courses_offline_desc">
+              لأبناء وبنات الحي، في قاعات مجهّزة داخل المركز، بإشراف مباشر من المعلمين.
+            </p>
+            <ul class="small mb-3">
+              <li data-i18n="courses_offline_item1">دورات تلاوة وتحفيظ لجميع الأعمار.</li>
+              <li data-i18n="courses_offline_item2">دورة تجويد تأسيسية ومتقدمة.</li>
+              <li data-i18n="courses_offline_item3">أوقات صباحية ومسائية مرنة.</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline-main btn-sm" data-i18n="courses_offline_cta">احجز في دورة حضورية</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pricing-card p-4 h-100 shadow-sm">
+            <span class="badge bg-main mb-2" data-i18n="courses_online_badge">أونلاين - عبر الإنترنت</span>
+            <h5 class="mb-2" data-i18n="courses_online_title">دورات أونلاين (عن بُعد)</h5>
+            <p class="text-muted small mb-3" data-i18n="courses_online_desc">
+              دروس مباشرة عبر منصات آمنة، مع تسجيل الحصص وإتاحة متابعتها لولي الأمر.
+            </p>
+            <ul class="small mb-3">
+              <li data-i18n="courses_online_item1">حلقات تحفيظ فردية وجماعية.</li>
+              <li data-i18n="courses_online_item2">دورات تجويد مكثفة وشهادات حضور.</li>
+              <li data-i18n="courses_online_item3">إمكانية الانضمام من أي دولة.</li>
+            </ul>
+            <a href="#contact" class="btn btn-main btn-sm" data-i18n="courses_online_cta">احجز في دورة أونلاين</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Memorization / Tracking Section -->
+  <section id="memorization" class="section-padding">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="mb-3" data-i18n="memorization_title">نظام الحفظ والمتابعة</h2>
+          <p class="mb-3">
+            نؤمن أن حفظ القرآن رحلة حياة، لذلك وضعنا نظامًا دقيقًا يضمن
+            ثبات الحفظ وجودة التلاوة، مع مراعاة وقت الطالب وظروفه.
+          </p>
+          <ol class="small mb-3 memorization-steps">
+            <li>تقييم أولي لمستوى الطالب في الحفظ والتلاوة.</li>
+            <li>وضع خطة حفظ ومراجعة تناسب عمره ووقته.</li>
+            <li>متابعة يومية للحفظ الجديد والمراجعة.</li>
+            <li>اختبارات شهرية وفصلية لقياس التقدّم.</li>
+            <li>تقارير دورية للطالب وولي الأمر.</li>
+          </ol>
+          <p class="mb-0">
+            كما نتيح للطلاب منصة إلكترونية لعرض
+            تقدّمهم في الحفظ والمراجعة، مع تحفيز عبر الأوسمة والشهادات.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <div class="tracking-box shadow-sm p-4 rounded-4 bg-light h-100">
+            <h5 class="mb-3">مثال على خطة أسبوعية</h5>
+            <div class="table-responsive">
+              <table class="table table-sm align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th>اليوم</th>
+                    <th>الحفظ الجديد</th>
+                    <th>المراجعة</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>الأحد</td>
+                    <td>١ صفحة من سورة البقرة</td>
+                    <td>آخر ٣ صفحات تم حفظها</td>
+                  </tr>
+                  <tr>
+                    <td>الإثنين</td>
+                    <td>١ صفحة من سورة البقرة</td>
+                    <td>٥ صفحات سابقة</td>
+                  </tr>
+                  <tr>
+                    <td>الثلاثاء</td>
+                    <td>١ صفحة من سورة البقرة</td>
+                    <td>ربع حزب كامل</td>
+                  </tr>
+                  <tr>
+                    <td>الأربعاء</td>
+                    <td>نصف صفحة مراجعة مركّزة</td>
+                    <td>حفظ الأسبوع كاملاً</td>
+                  </tr>
+                  <tr>
+                    <td>الخميس</td>
+                    <td>تثبيت الحفظ</td>
+                    <td>مراجعة عامة لما سبق</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small text-muted mt-3 mb-0">
+              يتم تعديل الخطة بحسب مستوى الطالب وقدرته، مع إمكانية الجمع بين
+              الحفظ والمراجعة فقط لمن أنهى حفظ القرآن.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center mb-5 testimonials-section">
+        <h2 class="section-title mb-3" data-i18n="testimonials_title">ماذا يقول طلابنا وأولياء الأمور؟</h2>
+        <p class="text-muted">
+          بعض كلمات الشكر التي نعتز بها من طلابنا الكرام ومن أولياء الأمور.
+        </p>
+      </div>
+      <div class="row g-4 testimonials-section">
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-4 shadow-sm h-100">
+            <p class="mb-3">
+              "ابني كان يجد صعوبة في النطق الصحيح للحروف، خلال أشهر قليلة
+              تحسّن مستواه بشكل ملحوظ، وأصبح يحب حضور الحلقة."
+            </p>
+            <h6 class="mb-0">أم محمد</h6>
+            <span class="small text-muted">ولي أمر طالب في حلقة التأسيس</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-4 shadow-sm h-100">
+            <p class="mb-3">
+              "أنا الآن في مراجعة الجزء الأخير من الحفظ، والمتابعة دقيقة،
+              والمعلم يعتني بتجويدي وتصحيح أخطائي."
+            </p>
+            <h6 class="mb-0">عبدالرحمن</h6>
+            <span class="small text-muted">طالب في باقة الحفظ المكثف</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="testimonial-card p-4 shadow-sm h-100">
+            <p class="mb-3">
+              "أشكر القائمين على المركز على حسن التنظيم والتواصل، وتوفير
+              حلقات تناسب أوقاتنا وظروف الأبناء."
+            </p>
+            <h6 class="mb-0">أبو يوسف</h6>
+            <span class="small text-muted">ولي أمر ثلاثة طلاب</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title mb-3" data-i18n="faq_title">الأسئلة الشائعة</h2>
+        <p class="text-muted">
+          إن لم تجد إجابة سؤالك هنا، تواصل معنا وسنسعد بخدمتك.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-8 mx-auto">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeadingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapseOne"
+                  aria-expanded="true"
+                  aria-controls="faqCollapseOne"
+                >
+                  هل الحلقات حضورية أم عن بُعد؟
+                </button>
+              </h2>
+              <div
+                id="faqCollapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="faqHeadingOne"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  تتوفر لدينا حلقات حضورية في مقر المركز، وحلقات أونلاين عبر
+                  منصات معتمدة، ويمكنك اختيار ما يناسبك عند التسجيل.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeadingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapseTwo"
+                  aria-expanded="false"
+                  aria-controls="faqCollapseTwo"
+                >
+                  ما الأعمار التي يُقبل تسجيلها؟
+                </button>
+              </h2>
+              <div
+                id="faqCollapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="faqHeadingTwo"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  نقبل الطلاب من عمر ٦ سنوات فما فوق، مع وجود برامج خاصة
+                  للأطفال، وبرامج للكبار والنساء.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeadingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapseThree"
+                  aria-expanded="false"
+                  aria-controls="faqCollapseThree"
+                >
+                  هل توجد خصومات للأشقاء؟
+                </button>
+              </h2>
+              <div
+                id="faqCollapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="faqHeadingThree"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  نعم، تتوفر خصومات خاصة للأشقاء وللمجموعات، يمكنك الاستفسار
+                  عنها عند التواصل مع إدارة المركز.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqHeadingFour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapseFour"
+                  aria-expanded="false"
+                  aria-controls="faqCollapseFour"
+                >
+                  كيف يتم تسديد الرسوم؟
+                </button>
+              </h2>
+              <div
+                id="faqCollapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="faqHeadingFour"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  يتم التسديد شهريًا عبر تحويل بنكي أو دفع إلكتروني، ويتم
+                  إرسال الفاتورة ورقم الحساب بعد تأكيد التسجيل.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding bg-main-dark text-white">
+    <div class="container">
+      <div class="row g-4 align-items-center stagger">
+        <div class="col-lg-6">
+          <h2 class="section-title text-white mb-3" data-i18n="contact_title">تواصل معنا وسجّل الآن</h2>
+          <p class="mb-3" data-i18n="contact_lead">
+            يسعدنا خدمتك عبر النموذج أو الواتساب، وسنتواصل معك
+            لتحديد البرنامج والحلقة الأنسب لك أو لابنك.
+          </p>
+          <ul class="list-unstyled small mb-4 contact-info">
+            <li>
+              <strong>الجوال (واتساب):</strong>
+              <a href="https://wa.me/+201067818406" target="_blank" class="text-white text-decoration-underline">
+                +201067818406
+              </a>
+            </li>
+            <li>
+              <strong>البريد الإلكتروني:</strong>
+              <a href="mailto:info@ibnaljazari-center.com" class="text-white text-decoration-underline">
+                info@ibnaljazari-center.com
+              </a>
+            </li>
+            <li>
+              <strong>الموقع:</strong> ( محافظة المنيا - مركز مطاي - مطاي البلد - شارع المحدة - مسجد الامام علي بن ابي طالب)
+            </li>
+          </ul>
+          <a
+            href="https://wa.me/+201067818406"
+            target="_blank"
+            class="btn btn-whatsapp mb-4"
+            aria-label="تواصل عبر واتساب"
+          >
+            <span class="whatsapp-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="20" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.11 17.37c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.6-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.83-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.3 0 1.36.99 2.67 1.13 2.85.14.18 1.95 2.98 4.73 4.18.66.28 1.17.45 1.57.57.66.21 1.26.18 1.74.11.53-.08 1.6-.65 1.83-1.27.23-.62.23-1.15.16-1.27-.07-.12-.25-.2-.52-.34z"/>
+                <path d="M16.03 3.2c-7.07 0-12.83 5.7-12.83 12.71 0 2.24.59 4.42 1.71 6.34L3 29l6.95-1.82c1.86 1 3.96 1.53 6.08 1.53h.01c7.07 0 12.83-5.7 12.83-12.71S23.1 3.2 16.03 3.2zm0 23.28h-.01c-1.9 0-3.77-.51-5.4-1.49l-.39-.23-4.12 1.08 1.1-4.01-.25-.4a10.54 10.54 0 0 1-1.62-5.56c0-5.8 4.78-10.52 10.69-10.52 5.91 0 10.69 4.72 10.69 10.52S21.94 26.48 16.03 26.48z"/>
+              </svg>
+            </span>
+            <span>تواصل عبر واتساب</span>
+          </a>
+          <p class="small mb-0">
+            يمكنك أيضًا متابعة أخبار المركز عبر منصات التواصل الاجتماعي
+            (أضف روابط حساباتكم هنا).
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-card bg-white text-dark p-4 rounded-4 shadow-sm">
+            <h5 class="mb-3" data-i18n="contact_form_title">نموذج التسجيل السريع</h5>
+            <form id="contactForm" class="small">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" data-i18n="contact_form_name">الاسم الكامل</label>
+                  <input type="text" class="form-control" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" data-i18n="contact_form_phone">رقم الجوال</label>
+                  <input type="tel" class="form-control" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" data-i18n="contact_form_email">البريد الإلكتروني (اختياري)</label>
+                  <input type="email" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" data-i18n="contact_form_program">اختيار البرنامج</label>
+                  <select class="form-select" id="packageSelect">
+                    <option value="" data-i18n="contact_form_program_placeholder">اختر البرنامج</option>
+                    <option data-i18n="contact_form_program_opt1">باقة المبتدئين</option>
+                    <option data-i18n="contact_form_program_opt2">باقة الحفظ المنتظم</option>
+                    <option data-i18n="contact_form_program_opt3">باقة الحفظ المكثف</option>
+                    <option data-i18n="contact_form_program_opt4">برنامج الإجازة بالسند</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" data-i18n="contact_form_message">رسالتك أو ملاحظاتك</label>
+                  <textarea rows="3" class="form-control"></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-main w-100 mt-3" data-i18n="contact_form_submit">
+                إرسال الطلب
+              </button>
+              <div class="form-message small mt-2 text-center d-none"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-3 bg-dark text-white-50 small">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+      <span>© <span id="year"></span> مركز ابن الجزري لتحفيظ القرآن الكريم</span>
+      <span data-i18n="footer_design">تصميم وتنفيذ: يمكنك وضع اسمك هنا</span>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/translations.js"></script>
+
+
+
+  <!-- ************************************ -->
+
+
+  <script>
+// ضبط padding-top ديناميكيًا بعد التحميل الكامل
+function fixNavbarGap() {
+  const navbar = document.querySelector('.navbar.fixed-top');
+  if (!navbar) return;
+  
+  const height = navbar.offsetHeight;
+  document.body.style.paddingTop = height + 'px';
+  // إذا كان لديك hero section مع padding-top يدوي، يمكن تعديله هنا أيضًا
+  const hero = document.querySelector('#hero');
+  if (hero) {
+    hero.style.paddingTop = height + 'px';
+  }
+}
+
+// شغلها مرة بعد التحميل
+window.addEventListener('load', fixNavbarGap);
+
+// ومرة أخرى بعد 300–500ms (احتياطي للموبايل)
+setTimeout(fixNavbarGap, 400);
+
+// وفي حال تغيير حجم الشاشة (rotate الجهاز مثلاً)
+window.addEventListener('resize', fixNavbarGap);
+</script>
+  <!-- ************************************** -->
+</body>
+</html>
+
