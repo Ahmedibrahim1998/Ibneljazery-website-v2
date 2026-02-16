@@ -134,6 +134,12 @@ document.addEventListener('DOMContentLoaded', () => {
   handleAboutAnimations();
   handleHeroAnimations();
   handleTeachersAnimations();
+  fixMobileHero(); // إصلاح الموبايل
+});
+
+// شغّل عند تغيير حجم الشاشة
+window.addEventListener('resize', () => {
+  fixMobileHero();
 });
 
 // ────────────── Teachers Section Animations ──────────────
@@ -180,7 +186,30 @@ function handleHeroAnimations() {
     if (heroRightContent) {
       heroRightContent.classList.add('loaded');
     }
-  }, 300);
+  }, 100); // تم تقليل التأخير من 300 إلى 100ms
+}
+
+// إضافة دالة لإصلاح مشاكل الموبايل
+function fixMobileHero() {
+  if (window.innerWidth <= 576) {
+    const hero = document.querySelector('.hero');
+    const heroContainer = document.querySelector('.hero .container');
+    
+    if (hero && heroContainer) {
+      // التأكد من أن الهيرو يملأ العرض الكامل
+      hero.style.width = '100vw';
+      hero.style.minWidth = '100vw';
+      hero.style.marginLeft = '0';
+      hero.style.marginRight = '0';
+      hero.style.paddingLeft = '0';
+      hero.style.paddingRight = '0';
+      
+      heroContainer.style.maxWidth = '100%';
+      heroContainer.style.width = '100%';
+      heroContainer.style.paddingLeft = '15px';
+      heroContainer.style.paddingRight = '15px';
+    }
+  }
 }
 
 // ────────────── Enhanced Button Effects ──────────────
