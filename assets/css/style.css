@@ -42,7 +42,7 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-  padding-top: 72px; /* علشان النافبار الـ fixed ما يسيب فراغ كبير */
+  /*padding-top: 72px; /* علشان النافبار الـ fixed ما يسيب فراغ كبير */
   padding-bottom: 60px;
 }
 

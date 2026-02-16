@@ -790,35 +790,38 @@
   <script src="assets/js/translations.js"></script>
 
 
-
-  <!-- ************************************ -->
-
-
   <script>
-// ضبط padding-top ديناميكيًا بعد التحميل الكامل
-function fixNavbarGap() {
+// ضبط padding-top الـ hero والـ body ديناميكيًا بناءً على ارتفاع الـ navbar الفعلي
+function fixNavbarOffset() {
   const navbar = document.querySelector('.navbar.fixed-top');
   if (!navbar) return;
+
+  const navbarHeight = navbar.offsetHeight;
   
-  const height = navbar.offsetHeight;
-  document.body.style.paddingTop = height + 'px';
-  // إذا كان لديك hero section مع padding-top يدوي، يمكن تعديله هنا أيضًا
+  // ضبط body
+  document.body.style.paddingTop = navbarHeight + 'px';
+  
+  // ضبط hero (الأهم عشان الفراغ الجانبي/الأعلى)
   const hero = document.querySelector('#hero');
   if (hero) {
-    hero.style.paddingTop = height + 'px';
+    hero.style.paddingTop = navbarHeight + 'px';
   }
+  
+  // ضبط scroll-padding للسكرول السلس
+  document.documentElement.style.scrollPaddingTop = navbarHeight + 'px';
 }
 
-// شغلها مرة بعد التحميل
-window.addEventListener('load', fixNavbarGap);
+// شغلها عند التحميل الكامل
+window.addEventListener('load', fixNavbarOffset);
 
-// ومرة أخرى بعد 300–500ms (احتياطي للموبايل)
-setTimeout(fixNavbarGap, 400);
+// شغلها بعد تأخير بسيط (مهم جدًا على الموبايل)
+setTimeout(fixNavbarOffset, 300);
+setTimeout(fixNavbarOffset, 800); // احتياطي إضافي
 
-// وفي حال تغيير حجم الشاشة (rotate الجهاز مثلاً)
-window.addEventListener('resize', fixNavbarGap);
+// شغلها عند تغيير حجم الشاشة أو rotate الجهاز
+window.addEventListener('resize', fixNavbarOffset);
+window.addEventListener('orientationchange', fixNavbarOffset);
 </script>
-  <!-- ************************************** -->
 </body>
 </html>
 
