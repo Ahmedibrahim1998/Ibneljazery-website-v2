@@ -4,6 +4,9 @@ body {
   background-color: #f5f3ea; /* خلفية فاتحة دافئة */
   scroll-behavior: smooth;
   scroll-padding-top: 72px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .navbar-brand .logo-circle {
@@ -1057,25 +1060,57 @@ body {
 
 /* Mobile Hero Section Fix */
 @media (max-width: 576px) {
+  html, body {
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
   .hero {
     padding-left: 0 !important;
     padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100vw !important;
+    min-width: 100vw !important;
+  }
+  
+  .hero .overlay {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
   }
   
   .hero .container {
     padding-left: 15px !important;
     padding-right: 15px !important;
     max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   .hero .row {
     margin-left: 0 !important;
     margin-right: 0 !important;
+    width: 100% !important;
   }
   
   .hero .col-lg-7 {
     padding-left: 0 !important;
     padding-right: 0 !important;
+    width: 100% !important;
+  }
+  
+  .hero .hero-stats {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .hero .hero-stats .col-6,
+  .hero .hero-stats .col-md-4 {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
   }
 }
 
